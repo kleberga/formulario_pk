@@ -31,7 +31,7 @@ class FormularioComponente {
           border: OutlineInputBorder()),
       validator: (value) {
         if (value == null || value.isEmpty || !regex.hasMatch(value)) {
-          return 'Informe um e-mail válido';
+          return 'Informe um e-mail válido!';
         }
         return null;
       },
@@ -48,10 +48,10 @@ class FormularioComponente {
           border: OutlineInputBorder()),
       validator: (value) {
         if (value == null || value.isEmpty) {
-          return 'Informe uma senha';
+          return 'Informe uma senha!';
         }
         if (value.length < 8) {
-          return 'A senha deve possuir pelo menos 8 caracteres';
+          return 'A senha deve possuir pelo menos 8 caracteres!';
         }
         return null;
       },
