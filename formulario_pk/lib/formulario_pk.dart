@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 class FormularioComponente {
 
   Widget CaixaFormularioLogin(TextEditingController controlador, String descricao,
-      bool obscureTexto, String mensagemErro){
+      bool obscureTexto, String mensagemErro, Icon icone){
     return TextFormField(
       controller: controlador,
       obscureText: obscureTexto,
       decoration: InputDecoration(
           label: Text(descricao, style: TextStyle(fontSize: 20),),
-          border: OutlineInputBorder()),
+          border: OutlineInputBorder(), icon: icone),
       validator: (value) {
         if (value == null || value.isEmpty ) {
           return mensagemErro;
@@ -28,7 +28,7 @@ class FormularioComponente {
       obscureText: obscureTexto,
       decoration: InputDecoration(
           label: Text('E-mail', style: TextStyle(fontSize: 20),),
-          border: OutlineInputBorder()),
+          border: OutlineInputBorder(), icon: Icon(Icons.email)),
       validator: (value) {
         if (value == null || value.isEmpty || !regex.hasMatch(value)) {
           return 'Informe um e-mail válido!';
@@ -45,7 +45,7 @@ class FormularioComponente {
       obscureText: obscureTexto,
       decoration: InputDecoration(
           label: Text('Senha', style: TextStyle(fontSize: 20),),
-          border: OutlineInputBorder()),
+          border: OutlineInputBorder(), icon: Icon(Icons.key)),
       validator: (value) {
         if (value == null || value.isEmpty) {
           return 'Informe uma senha!';
