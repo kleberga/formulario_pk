@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 class FormularioComponente {
 
   Widget CaixaFormularioLogin(TextEditingController controlador, String descricao,
-      bool obscureTexto, String mensagemErro, Icon icone, Key? id){
+      bool obscureTexto, String mensagemErro, Icon icone, String id){
     return TextFormField(
-      key: id,
+      key: Key(id),
       controller: controlador,
       obscureText: obscureTexto,
       decoration: InputDecoration(
@@ -22,10 +22,10 @@ class FormularioComponente {
   }
 
   Widget CaixaFormularioRegistroEmail(TextEditingController controlador,
-      bool obscureTexto, String stringRegex, Key? id){
+      bool obscureTexto, String stringRegex, String id){
     final regex = RegExp(stringRegex);
     return TextFormField(
-      key: id,
+      key: Key(id),
       controller: controlador,
       obscureText: obscureTexto,
       decoration: InputDecoration(
@@ -41,9 +41,9 @@ class FormularioComponente {
   }
 
   Widget CaixaFormularioRegistroSenha(TextEditingController controlador,
-      bool obscureTexto, Key? id){
+      bool obscureTexto, String id){
     return TextFormField(
-      key: id,
+      key: Key(id),
       controller: controlador,
       obscureText: obscureTexto,
       decoration: InputDecoration(
